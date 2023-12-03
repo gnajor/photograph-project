@@ -5,6 +5,14 @@
 body{
     margin:0;
     overflow: hidden;
+}
+
+#wrapper{
+    transform:scale(1);
+
+    transition-property: transform;
+    transition-timing-function: ease-in-out;
+    transition-duration: 10000ms;
 
 }
 
@@ -16,7 +24,13 @@ body{
     position: absolute;
     inset:0;
     z-index: -10;
+}
 
+#image_container{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    right:0%;
 }
 
 #shutter_effect.shutter{
@@ -35,35 +49,25 @@ body{
 }
 
 #background1{
-    right: 0;
     background-image: url("media/background.jpg");
+}
+
+#background2{
+    background-image: url("media/background3.jpg");
+    left: 100%;
+}
+
+#image_container{
+    right:0;
 
     transition-property: right;
     transition-duration: 1000ms;
     transition-timing-function: ease-in-out;
 }
 
-#background1.right{
-    right:100%;
-
-}
-
-#background2{
-    background-image: url("media/background3.jpg");
-    left: 100%;
-
-    transition-property: left;
-    transition-duration: 1000ms;
-    transition-timing-function: ease-in-out;
-}
-
-#background2.left{
-    left:0;
-}
-
 #wrapper{
-    transition-delay: 300ms;
-
+    transition: 500ms all ease-in-out; 
+    position: relative;
 }
 
 #phone_container{
@@ -72,31 +76,41 @@ body{
     align-items: center;
 
     height: 100vh;
+    width: 100vw;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
 }
 
 #phone_base{
+
     height:65%;
     width:80%;
+    border-radius: 50px;
 
-    border:8px solid black;
-    border-radius: 60px;
-
-    box-shadow: 0px 0px 2px 4px #425361, 0px 0px 10px 5px #425361;
+    box-shadow:
+    0px 0px 1px 10px black inset, 
+    0px 0px 2px 600px rgba(0, 0, 0, 0.5),
+    0px 0px 2px 6px rgba(0, 0, 0, 0.9),
+    30px 30px 6px 6px rgba(0, 0, 0, 0.7)
+    ;
 
     display: flex;
     justify-content: space-between;
 
     overflow: hidden;
+ 
 }
 
 #phone_top{
     background-color: rgb(0, 0, 0);
-    width: 5%;
+    width: 6%;
     height: 100%;
 
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;    
 }
 
 #speaker_grill{
@@ -115,7 +129,8 @@ body{
 
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;    
+
 }
 
 nav{

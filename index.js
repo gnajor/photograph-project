@@ -1,20 +1,34 @@
 function select_nav_item(){
 
     let shutter_button = document.querySelector("#shutter_button");
+    let container = document.querySelector("#image_container");
+    let wrapper = document.querySelector("#wrapper");
 
-    let div_dom = document.querySelector(".nav_item:nth-of-type(3)");
-    div_dom.addEventListener("click", on_click_history);
+    let div_history = document.querySelector(".nav_item:nth-of-type(3)");
+    div_history.addEventListener("click", on_click_history);
 
-    let background = document.querySelector("#background1");
-    let background2 = document.querySelector("#background2");
-    let background3 = document.querySelector("#background3");
-    let background4 = document.querySelector("#background4");
+    let div_now = document.querySelector(".nav_item:nth-of-type(2)");
+    div_now.addEventListener("click", on_click_now);
 
+    let div_future = document.querySelector(".nav_item:nth-of-type(1)");
+    div_future.addEventListener("click", on_click_future);
 
 
     function on_click_history(){
-        background.classList.toggle("right");
-        background2.classList.toggle("left");
+        container.style.right = "100%";
+
+        shutter_button.addEventListener("click", on_click_shutter);
+
+    }
+
+    function on_click_now(){
+        container.style.right = "200%";
+
+        shutter_button.addEventListener("click", on_click_shutter);
+    }
+
+    function on_click_future(){
+        container.style.right = "300%";
 
         shutter_button.addEventListener("click", on_click_shutter);
     }
