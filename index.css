@@ -4,7 +4,16 @@
 
 body{
     margin:0;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
+    
+    background-image: url("media/background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#wrapper{
+    transition-delay: 300ms;
+    
 }
 
 #phone_container{
@@ -15,3 +24,133 @@ body{
     height: 100vh;
 }
 
+#phone_base{
+    height:65%;
+    width:80%;
+
+    border:8px solid black;
+    border-radius: 60px;
+
+    box-shadow: 0px 0px 2px 4px #425361, 0px 0px 10px 5px #425361;
+
+    display: flex;
+    justify-content: space-between;
+
+    overflow: hidden;
+}
+
+#phone_top{
+    background-color: rgb(0, 0, 0);
+    width: 5%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#speaker_grill{
+    height: 15%;
+    width: 8%;
+
+    background-color: rgb(82, 82, 82);
+
+    border-radius: 10px;
+}
+
+#phone_bottom{
+    height: 100%;
+    width: 25%;
+    background-color: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav{
+    background-color: rgb(59, 59, 59);
+    height: 85%;
+    width: 20%;
+    border-radius: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+
+    gap:22%;
+}
+
+nav > .nav_item{
+    transform: rotate(-90deg);
+
+    transition-property: color;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+
+    color: white;
+}
+
+nav > .nav_item:hover{
+    color: rgb(255, 187, 0);
+    cursor: pointer;
+}
+
+nav > .nav_item:nth-of-type(2){
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+    padding:0 30px;
+}
+
+nav p{
+    margin:0;
+    font-size:25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#button_container{
+    height: 80%;
+    width: 60%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#shutter_button{
+    height: 6vw;
+    width: 6vw;
+    border-radius: 50%;
+    border:2px solid black;
+    box-shadow:0px 0px 1px 8px white;
+
+    background-color: white;
+
+    transition-property: box-shadow;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+}
+
+#shutter_button:hover{
+    box-shadow: 0px 0px 1px 8px white, 0px 0px 10px 2px black inset;
+}
+
+#shutter_button:active{
+    box-shadow: 0px 0px 1px 8px white, 0px 0px 20px 10px black inset;
+}
+
+#change_angle_button{
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    background-color: gray;
+}
+
+#album_button{
+    background-image: url("media/background.jpg");
+    background-size: cover;
+    height: 75px;
+    width: 75px;
+}
