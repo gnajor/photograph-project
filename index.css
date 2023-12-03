@@ -4,16 +4,66 @@
 
 body{
     margin:0;
-    background-color: rgb(255, 255, 255);
-    
-    background-image: url("media/background.jpg");
+    overflow: hidden;
+
+}
+
+#shutter_effect{
+    transition-property: border;
+    transition-duration: 1000ms;
+    transition-timing-function: ease-in-out;
+
+    position: absolute;
+    inset:0;
+    z-index: -10;
+
+}
+
+#shutter_effect.shutter{
+    border:500px solid rgba(0, 0, 0, 0.9);
+    z-index: 1;
+}
+
+.background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+
     background-size: cover;
     background-position: center;
 }
 
+#background1{
+    right: 0;
+    background-image: url("media/background.jpg");
+
+    transition-property: right;
+    transition-duration: 1000ms;
+    transition-timing-function: ease-in-out;
+}
+
+#background1.right{
+    right:100%;
+
+}
+
+#background2{
+    background-image: url("media/background3.jpg");
+    left: 100%;
+
+    transition-property: left;
+    transition-duration: 1000ms;
+    transition-timing-function: ease-in-out;
+}
+
+#background2.left{
+    left:0;
+}
+
 #wrapper{
     transition-delay: 300ms;
-    
+
 }
 
 #phone_container{
