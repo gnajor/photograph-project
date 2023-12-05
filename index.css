@@ -49,12 +49,16 @@ body{
 }
 
 #background1{
-    background-image: url("media/background.jpg");
+    background-image: url("https://images.unsplash.com/photo-1531012804729-7df44b58327b?q=80&w=2055&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
 
 #background2{
     background-image: url("media/background3.jpg");
     left: 100%;
+}
+
+#background3{
+    background-image: url("");
 }
 
 #image_container{
@@ -91,7 +95,7 @@ body{
 
     box-shadow:
     0px 0px 1px 10px black inset, 
-    0px 0px 2px 600px rgba(0, 0, 0, 0.5),
+    /*0px 0px 2px 700px rgba(0, 0, 0, 0.6),*/
     0px 0px 2px 6px rgba(0, 0, 0, 0.9),
     30px 30px 6px 6px rgba(0, 0, 0, 0.7)
     ;
