@@ -5,6 +5,7 @@
 body{
     margin:0;
     overflow: hidden;
+    background-color: rgb(5, 5, 5);
 }
 
 #wrapper{
@@ -54,10 +55,6 @@ body{
     transform: rotate3d(1, 0, 0, 0deg);
 }
 
-#background1{
-    background-image: url("media/background.jpg");
-}
-
 .background img{
     object-fit: cover;
     object-position: center;
@@ -70,13 +67,38 @@ body{
     transform: rotate3d(1, 0, 0, 180deg);
 }
 
+.background img{
+    opacity:0;
+    transform: rotate(180deg);
+
+    transition-property: opacity;
+    transition-duration: 10ms;
+    transition-delay: 1500ms;
+}
+
+.background .display{
+    opacity: 1;
+}
+
+
+#background1{
+    background-image: url("media/background5.jpg");
+}
+
 #background2{
     background-image: url("media/background3.jpg");
     left: 100%;
 }
 
 #background3{
-    background-image: url("");
+    background-image: url("media/background7.jpg");
+    left:200%;
+}
+
+#background4{
+    background-image: url("https://www.apple.com/newsroom/videos/media/rotation/posters/Apple-WWCD23-Vision-Pro-rotation-230605.jpg.large_2x.jpg");
+    left:300%;
+
 }
 
 #image_container{
@@ -160,40 +182,52 @@ nav{
     height: 85%;
     width: 20%;
     border-radius: 40px;
+    overflow: hidden;
+}
+
+nav #item_container{
+    width: 100%;
+    height: 100%;
+    gap:22%;
 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column; 
 
-    gap:22%;
+    position: relative;
+    top:0;
+
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+    transition-property: top;
 }
 
-nav > .nav_item{
+nav .nav_item{
     transform: rotate(-90deg);
 
-    transition-property: color;
+    font-size:25px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    transition-property: color, font-size;
     transition-duration: 300ms;
     transition-timing-function: ease-in-out;
 
     color: white;
 }
 
-nav > .nav_item:hover{
+nav .yellow{
+    color: rgb(255, 187, 0);
+    font-size: 200%;
+}
+
+nav .nav_item:hover{
     color: rgb(255, 187, 0);
     cursor: pointer;
 }
 
-nav > .nav_item:nth-of-type(2){
-    border-right: 2px solid white;
-    border-left: 2px solid white;
-    padding:0 30px;
-}
-
 nav p{
     margin:0;
-    font-size:25px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 #button_container{
@@ -228,11 +262,34 @@ nav p{
     box-shadow: 0px 0px 1px 8px white, 0px 0px 20px 10px black inset;
 }
 
+#change_angle_button:hover{
+    cursor: pointer;
+    background-color: rgb(37, 37, 37);
+}
+
 #change_angle_button{
     height: 75px;
     width: 75px;
     border-radius: 50%;
-    background-color: gray;
+    background-color: rgb(59, 59, 59);
+
+    transform: rotate(-10deg);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition-property: background-color, transform;
+    transition-duration: 400ms, 700ms;
+    transition-timing-function: ease-in-out;
+}
+
+#change_angle_button img{
+    width: 40px;
+}
+
+#change_angle_button.rotate{
+    transform:rotate(180deg);
 }
 
 #album_button{
