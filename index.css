@@ -1,3 +1,9 @@
+:root{
+    --transform1:rotateX(0deg)
+    --transform:rotateX(90deg);
+}
+
+
 *{
     box-sizing: border-box;
 }
@@ -8,13 +14,99 @@ body{
     background-color: rgb(5, 5, 5);
 }
 
-#wrapper{
-    transform:scale(1);
+#loading_in_container{
+    background-image: url("media/background6.jpg");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+
+    transition-property: transform, opacity;
+    transition-duration: 3s;
+    transition-delay: 2s, 4s;
+    transition-timing-function: ease-in-out;
+}
+
+
+#dark_filter{
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    animation: background_fade_out 3s ease-in-out;
+
+    transition-property: left;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+}
+
+@keyframes background_fade_out{
+    0%{   
+        background-color: rgba(0, 0, 0, 1);
+    }
+    100%{
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+}
+
+#loading_in_container h1{
+    position: absolute;
+    left:50%;
+    top:45%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 90px;
+    text-align: center;
+    z-index:1;
+
+    animation:change_opacity 4s ease-in-out;
+    transition-property: left;
+    transition-duration: 3s;
+    transition-timing-function: ease-in-out;
+}
+
+#loading_in_container .move_left{
+    left:-100%;
+}
+
+@keyframes change_opacity {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+/*
+@keyframes color-animation {
+    0%{
+        color:white;
+    }
+
+    50%{
+        color:#6FA2E8;
+    }
+
+    100%{
+        color: white;
+    }
+}
+
+#loading_in_container span:nth-child(1){animation: color-animation 5s ease-in-out 3s;}
+#loading_in_container span:nth-child(2){animation: color-animation 5s ease-in-out 3.5s;}
+#loading_in_container span:nth-child(3){animation: color-animation 5s ease-in-out 4s;}
+#loading_in_container span:nth-child(4){animation: color-animation 5s ease-in-out 4.5s;}
+*/
+
+#content_wrapper{
+    transform: scale(4);
 
     transition-property: transform;
+    transition-duration: 3s;
     transition-timing-function: ease-in-out;
-    transition-duration: 10000ms;
-
+    transition-delay: 6s;
 }
 
 #shutter_effect{

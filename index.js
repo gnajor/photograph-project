@@ -83,6 +83,27 @@ function change_view_button(backgroundId, rightProcent){
     }
 }
 
+function start_animation_on_click(){
+    let h1_dom = document.querySelector("#loading_in_container > h1");
+    let dark_filter = document.querySelector("#dark_filter");
+    let container = document.querySelector("#loading_in_container");
+    let container2 = document.querySelector("#content_wrapper");
 
+    h1_dom.addEventListener("click", function(){
+        h1_dom.classList.add("move_left");
+        dark_filter.style.left = "100%";
+        container.style.transform = "scale(4)";
+        container.style.opacity = "0";
+
+        container2.style.transform = "scale(1)";
+    });
+
+    container2.addEventListener("transitionend", function(){
+        container.remove();
+    });
+}
+
+
+
+start_animation_on_click();
 select_nav_item();
-
