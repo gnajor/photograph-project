@@ -100,14 +100,17 @@ body{
 #loading_in_container span:nth-child(4){animation: color-animation 5s ease-in-out 4.5s;}
 */
 
-#content_wrapper{
+/*#content_wrapper{
     transform: scale(4);
 
     transition-property: transform;
     transition-duration: 3s;
     transition-timing-function: ease-in-out;
     transition-delay: 6s;
-}
+}     
+
+will be added when done
+*/
 
 #shutter_effect{
     transition-property: border;

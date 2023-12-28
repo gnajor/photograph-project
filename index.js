@@ -57,9 +57,26 @@ change_view_button("#background4", "300%");
 function on_click_shutter(){
     let shutter_button = document.querySelector("#shutter_button");
     let shutter_effect = document.querySelector("#shutter_effect");
+    let container = document.querySelector("#image_container");
 
+    if(container.style.right === "100%"){
+        //Här ska history popupen vara
+    }
+
+    if(container.style.right === "200%"){
+        //Här ska nutid popupen vara
+    }
+
+    if(container.style.right === "300%"){
+        //framtid popup
+
+    }
+
+
+    //för att ta bort det sedan gå tillbaka måste shutter klassen tas bort
     shutter_effect.classList.add("shutter");
 }
+
 
 function change_view_button(backgroundId, rightProcent){
 
@@ -82,7 +99,7 @@ function change_view_button(backgroundId, rightProcent){
         }
     }
 }
-
+/*
 function start_animation_on_click(){
     let h1_dom = document.querySelector("#loading_in_container > h1");
     let dark_filter = document.querySelector("#dark_filter");
@@ -102,8 +119,10 @@ function start_animation_on_click(){
         container.remove();
     });
 }
+*/
 
 
+//start_animation_on_click();
 
-start_animation_on_click();
+
 select_nav_item();
