@@ -69,7 +69,7 @@ function on_click_shutter(){
 
     if(container.style.right === "300%"){
         //framtid popup
-
+        
     }
 
 
@@ -95,8 +95,15 @@ function change_view_button(backgroundId, rightProcent){
         if(container.style.right === rightProcent){
             background.classList.toggle("flip");
             background2.classList.toggle("display");
-
         }
+        button.setAttribute("disabled", true);
+        button.style.cursor = "defualt";
+
+        setTimeout(make_button_cooldown, 2600);
+    }
+
+    function make_button_cooldown(){
+        button.removeAttribute("disabled", true);
     }
 }
 /*
