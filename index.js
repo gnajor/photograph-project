@@ -68,12 +68,14 @@ function on_click_shutter(){
     }
 
     if(container.style.right === "300%"){
-        //framtid popup
-        
+        let future_popup = document.querySelector("#future_popup");
+        shutter_effect.addEventListener("transitionend", function(){
+            future_popup.style.display = "flex";
+        });
     }
 
 
-    //för att ta bort det sedan gå tillbaka måste shutter klassen tas bort
+    //för att sedan gå tillbaka måste shutter klassen tas bort
     shutter_effect.classList.add("shutter");
 }
 
