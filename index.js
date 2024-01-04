@@ -1,4 +1,4 @@
-function select_nav_item(){
+function select_nav_item() {
 
     let shutter_button = document.querySelector("#shutter_button");
     let container = document.querySelector("#image_container");
@@ -16,7 +16,7 @@ function select_nav_item(){
     let item_container = document.querySelector("#item_container");
 
 
-    function on_click_history(){
+    function on_click_history() {
         container.style.right = "100%";
         shutter_button.addEventListener("click", on_click_shutter);
 
@@ -28,7 +28,7 @@ function select_nav_item(){
 
     }
 
-    function on_click_now(){
+    function on_click_now() {
         container.style.right = "200%";
         shutter_button.addEventListener("click", on_click_shutter);
 
@@ -39,7 +39,7 @@ function select_nav_item(){
 
     }
 
-    function on_click_future(){
+    function on_click_future() {
         container.style.right = "300%";
         shutter_button.addEventListener("click", on_click_shutter);
 
@@ -54,22 +54,26 @@ change_view_button("#background3", "200%");
 change_view_button("#background4", "300%");
 
 
-function on_click_shutter(){
+function on_click_shutter() {
     let shutter_button = document.querySelector("#shutter_button");
     let shutter_effect = document.querySelector("#shutter_effect");
     let container = document.querySelector("#image_container");
 
-    if(container.style.right === "100%"){
+    if (container.style.right === "100%") {
         //Här ska history popupen vara
     }
 
-    if(container.style.right === "200%"){
+    if (container.style.right === "200%") {
         //Här ska nutid popupen vara
+        let nutid_popup = document.querySelector("#nutid_wrapper");
+        shutter_effect.addEventListener("transitionend", function () {
+            nutid_popup.style.display = "flex";
+        })
     }
 
-    if(container.style.right === "300%"){
+    if (container.style.right === "300%") {
         let future_popup = document.querySelector("#future_popup");
-        shutter_effect.addEventListener("transitionend", function(){
+        shutter_effect.addEventListener("transitionend", function () {
             future_popup.style.display = "flex";
         });
     }
@@ -81,7 +85,7 @@ function on_click_shutter(){
 
 
 
-function change_view_button(backgroundId, rightProcent){
+function change_view_button(backgroundId, rightProcent) {
 
     let button = document.querySelector("#change_angle_button");
     button.addEventListener("click", on_click_rotate_image);
@@ -89,13 +93,13 @@ function change_view_button(backgroundId, rightProcent){
     let container = document.querySelector("#image_container");
 
 
-    function on_click_rotate_image(event){
+    function on_click_rotate_image(event) {
         button.classList.toggle("rotate");
 
         let background = document.querySelector(backgroundId);
         let background2 = document.querySelector(backgroundId + "> img");
 
-        if(container.style.right === rightProcent){
+        if (container.style.right === rightProcent) {
             background.classList.toggle("flip");
             background2.classList.toggle("display");
         }
@@ -105,7 +109,7 @@ function change_view_button(backgroundId, rightProcent){
         setTimeout(make_button_cooldown, 2600);
     }
 
-    function make_button_cooldown(){
+    function make_button_cooldown() {
         button.removeAttribute("disabled", true);
     }
 }
