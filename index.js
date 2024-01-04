@@ -61,6 +61,8 @@ function on_click_shutter(){
     shutter_effect.classList.add("shutter");
 }
 
+
+
 function change_view_button(backgroundId, rightProcent){
 
     let button = document.querySelector("#change_angle_button");
