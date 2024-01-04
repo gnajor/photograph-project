@@ -80,6 +80,7 @@ function on_click_shutter(){
 }
 
 
+
 function change_view_button(backgroundId, rightProcent){
 
     let button = document.querySelector("#change_angle_button");
