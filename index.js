@@ -68,7 +68,7 @@ function on_click_shutter() {
         let nutid_popup = document.querySelector("#nutid_wrapper");
         shutter_effect.addEventListener("transitionend", function () {
             nutid_popup.style.display = "flex";
-        })
+        }); 
     }
 
     if (container.style.right === "300%") {

@@ -118,8 +118,6 @@ will be added when done
     position: absolute;
     inset:0;
     opacity: 0;
-
-    
 }
 
 #image_container{
@@ -135,7 +133,7 @@ will be added when done
     z-index: 1;
 }
 
-#future_popup{
+#popup_container .popup{
     position: absolute;
     display: none;
     inset: 0;
