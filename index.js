@@ -59,6 +59,10 @@ function on_click_shutter() {
     let shutter_effect = document.querySelector("#shutter_effect");
     let container = document.querySelector("#image_container");
 
+    let popup_container = document.querySelector("#popup_container");
+
+    shutter_effect.classList.add("shutter");
+
     if (container.style.right === "100%") {
         //Här ska history popupen vara
     }
@@ -73,14 +77,19 @@ function on_click_shutter() {
 
     if (container.style.right === "300%") {
         let future_popup = document.querySelector("#future_popup");
-        shutter_effect.addEventListener("transitionend", function () {
-            future_popup.style.display = "flex";
+        future_popup.style.display = "flex";
+
+
+        let remove = future_popup.querySelector(".remove_button");
+        remove.addEventListener("click", function(){
+            future_popup.style.display = "none";
+            shutter_effect.classList.remove("shutter");
         });
     }
 
 
     //för att sedan gå tillbaka måste shutter klassen tas bort
-    shutter_effect.classList.add("shutter");
+
 }
 
 
