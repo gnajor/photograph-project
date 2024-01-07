@@ -64,7 +64,7 @@ function on_click_shutter() {
     }
 
     if (container.style.right === "200%") {
-        //Här ska nutid popupen vara
+        // Här ska nutid popupen vara
         let nutid_popup = document.querySelector("#nutid_wrapper");
         shutter_effect.addEventListener("transitionend", function () {
             nutid_popup.style.display = "flex";
