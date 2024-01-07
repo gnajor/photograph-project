@@ -1,3 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --phone_width: 1450px;
+    --phone_height: 600px;
+
+}
+
 #nutid_wrapper {
     display: none;
 }
@@ -33,4 +43,31 @@
 .anvandning_text {
     grid-template-columns: 4/5;
     grid-template-rows: 1/3;
+}
+
+.exit_button {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#shutter_effect {
+    transition-property: border, opacity;
+    transition-duration: 1000ms, 0ms;
+    transition-timing-function: ease-in-out;
+
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    border: 0px solid black;
+}
+
+#shutter_effect.shutter {
+    border: 500px solid rgba(0, 0, 0, 0.9);
+    opacity: 1;
+    z-index: 1;
 }
