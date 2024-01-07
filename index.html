@@ -24,7 +24,7 @@
             </div>             will be added when done-->
 
         <div id="popup_container">
-            <div id="future_popup">
+            <div id="future_popup" class="popup">
                 <div class="image_grid">
                     <img src="https://cdn.mos.cms.futurecdn.net/7VpvKAcHDkaxk589jBxeBJ-1200-80.jpg" alt="">
                     <img src="https://images.ray-ban.com/is/image/RayBan/8056597995429__STD__shad__qt.png?impolicy=RB_Product&width=800&bgc=%23f2f2f2"
@@ -62,26 +62,15 @@
                         Editor gör redigering av fotografier hur lätt som helst. Dess simplicitet och användargränssnitt
                         får mig att tro att detta är framtiden för fotografering.</p>
                 </div>
-            </div>
-            <div id="shutter_effect"></div>
-        </div>
 
-        <div id="wrapper" class="shutter">
-            <div id="loading_in_container">
-                <div id="dark_filter"></div>
-                <h1>
-                    <span>Discover</span>
-                    <span>photography's</span>
-                    <span> timeless</span>
-                    <span>journey</span>
-                </h1>
+                <button class="remove_button">X</button>
             </div>
 
-            <div id="nutid_wrapper">
+            <div id="nutid_wrapper" class="popup">
                 <div id="anvandning">
                     <div class="nutid_image">
-                        <img src="/media/crime_scene.jpg">
-                        <img src="/media/photo_album.jpg">
+                        <img src="media/crime_scene.jpg">
+                        <img src="media/photo_album.jpg">
                     </div>
                     <div class="anvandning_text">
                         <p>Genom att bevara minnen såsom till exempel bilder ger oss möjlighet att gå tillbaka i
@@ -116,96 +105,109 @@
                             Hot media är rika på information och kräver lite deltagande.
                         </p>
                     </div>
-                    <div id="kultur">
-                        <div class="kultur_image">
-                            <img src="/media/culture.jpg">
-                            <img src="/media/mexico.jpg">
-                        </div>
-                        <div class="kultur_text">
-                            <p>Fotografins primära funktion har varit att pålitlig registrera historiska händelser
-                                så länge
-                                som mediet har funnits. Det är mer än bara ett verktyg för att rapportera eller
-                                synliggöra;
-                                den fångar skönheten i det vi ser och speglar våra känslor. Bilder har känslomässigt
-                                och
-                                socialt värde, inte på grund av sin visuella skönhet utan för att de finns och kan
-                                ses. För
-                                att skapa mening med en bild måste man först förstå i vilken kulturmiljö den
-                                skapades och
-                                vilken period den tillhörde. Inga två människor, i någon kultur, vid någon tidpunkt,
-                                skulle
-                                uppfatta en bild på samma sätt; en kopia kommer aldrig att bli lika utmärkt som
-                                originalet.
-                            </p>
-                            <p>Att använda fotografier för att dokumentera vårt förflutna har varit ett smart drag.
-                                Modernitetens genomträngning i dagens kultur innebär att många historiska kulturella
-                                metoder
-                                endast kan upplevas genom fotografier. Genom att titta på historiska artefakter i
-                                bilder kan
-                                de få en bättre förståelse för sin historia och andra folks historia.
-                            </p>
-                        </div>
+                </div>
+                <div id="kultur">
+                    <div class="kultur_image">
+                        <img src="media/culture.jpg">
+                        <img src="media/mexico.jpg">
                     </div>
-
-
-                    <div id="button_container">
-                        <button id="change_angle_button">
-                            <img src="icons/rotate.png">
-                        </button>
-                        <div id="shutter_button"></div>
-                        <div id="album_button"></div>
+                    <div class="kultur_text">
+                        <p>Fotografins primära funktion har varit att pålitlig registrera historiska händelser
+                            så länge
+                            som mediet har funnits. Det är mer än bara ett verktyg för att rapportera eller
+                            synliggöra;
+                            den fångar skönheten i det vi ser och speglar våra känslor. Bilder har känslomässigt
+                            och
+                            socialt värde, inte på grund av sin visuella skönhet utan för att de finns och kan
+                            ses. För
+                            att skapa mening med en bild måste man först förstå i vilken kulturmiljö den
+                            skapades och
+                            vilken period den tillhörde. Inga två människor, i någon kultur, vid någon tidpunkt,
+                            skulle
+                            uppfatta en bild på samma sätt; en kopia kommer aldrig att bli lika utmärkt som
+                            originalet.
+                        </p>
+                        <p>Att använda fotografier för att dokumentera vårt förflutna har varit ett smart drag.
+                            Modernitetens genomträngning i dagens kultur innebär att många historiska kulturella
+                            metoder
+                            endast kan upplevas genom fotografier. Genom att titta på historiska artefakter i
+                            bilder kan
+                            de få en bättre förståelse för sin historia och andra folks historia.
+                        </p>
                     </div>
                 </div>
             </div>
 
-
-            <div id="content_wrapper">
-                <div id="image_container">
-                    <div id="background1" class="background"></div>
-                    <div id="background2" class="background">
-                        <img src="media/Image_background2.jpg">
-                    </div>
-                    <div id="background3" class="background">
-                        <img src="media/Image_background3.jpg">
-                    </div>
-                    <div id="background4" class="background">
-                        <img src="media/image_background4.png">
-                    </div>
+            <div id="historia_wrapper" class="popup">
+                <div class="historia_image">
+                    <img src="media/photo_rollfilm.jpg">
+                </div>
+                <div class="historia_text"> 
+                    <p> Förr i tiden använde man en form av fotografi som kallades Camera obscura.
+                        Det var namnet på den första lådkameran på 1500-talet som användes för konstnärer för att kunna måla av bilder. 
+                        Den utvecklades till att bli den första kameran som tog 20 minuter från att bilden togs till att den var färdigfotograferad. 
+                        De flesta fotografierna blev suddiga och hade ingen skärpa då man behövde vara helt stilla i 20 minuter. 
+                    </p>
+                    <p> Därefter kom kameran kodak black.
+                        Till en början var det vanligt att fotografera poträtt av människor där man skulle vara finklädd,
+                        på arbetsplatsen, städer, olika miljöer eller idrottsevenemang
+                        
+                    </p>
                 </div>
 
-                <div id="phone_container">
-                    <div id="phone_base">
-                        <div id="phone_top">
-                            <div id="speaker_grill"></div>
-                        </div>
-                        <div id="phone_bottom">
-                            <nav>
-                                <div id="item_container">
-                                    <div class="nav_item">
-                                        <p>Framtid</p>
-                                    </div>
-                                    <div class="nav_item">
-                                        <p>Nutid</p>
-                                    </div>
-                                    <div class="nav_item">
-                                        <p>Historia</p>
-                                    </div>
-                                </div>
-                            </nav>
 
-                            <div id="button_container">
-                                <div id="change_angle_button">
-                                    <img src="icons/rotate.png">
+            </div>
+
+            <div id="shutter_effect"></div>
+        </div>
+
+        <div id="content_wrapper">
+            <div id="image_container">
+                <div id="background1" class="background"></div>
+                <div id="background2" class="background">
+                    <img src="media/Image_background2.jpg">
+                </div>
+                <div id="background3" class="background">
+                    <img src="media/Image_background3.jpg">
+                </div>
+                <div id="background4" class="background">
+                    <img src="media/image_background4.png">
+                </div>
+            </div>
+
+            <div id="phone_container">
+                <div id="phone_base">
+                    <div id="phone_top">
+                        <div id="speaker_grill"></div>
+                    </div>
+                    <div id="phone_bottom">
+                        <nav>
+                            <div id="item_container">
+                                <div class="nav_item">
+                                    <p>Framtid</p>
                                 </div>
-                                <div id="shutter_button"></div>
-                                <div id="album_button"></div>
+                                <div class="nav_item">
+                                    <p>Nutid</p>
+                                </div>
+                                <div class="nav_item">
+                                    <p>Historia</p>
+                                </div>
                             </div>
+                        </nav>
+
+                        <div id="button_container">
+                            <div id="change_angle_button">
+                                <img src="icons/rotate.png">
+                            </div>
+                            <div id="shutter_button"></div>
+                            <div id="album_button"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <script src="index.js"></script>
+    </div>
+    <script src="index.js"></script>
 </body>
 
 </html>

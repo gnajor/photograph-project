@@ -118,8 +118,7 @@ will be added when done
     position: absolute;
     inset:0;
     opacity: 0;
-
-    
+    border: 0px solid black;
 }
 
 #image_container{
@@ -135,7 +134,7 @@ will be added when done
     z-index: 1;
 }
 
-#future_popup{
+#popup_container .popup{
     position: absolute;
     display: none;
     inset: 0;
@@ -190,6 +189,16 @@ will be added when done
     grid-row: 5 / span 2;
 }
 
+.remove_button{
+    position: fixed;
+    top:30px;
+    left:30px;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+}
+
 .background{
     position: absolute;
     width: 100%;
@@ -211,7 +220,6 @@ will be added when done
     object-position: center;
     height: 100%;
     width: 100%;
-
 }
 
 .flip{
