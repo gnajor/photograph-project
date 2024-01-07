@@ -76,7 +76,7 @@ function on_click_shutter() {
         let exit = nutid_wrapper.querySelector(".exit_button");
         exit.addEventListener("click", function () {
             nutid_wrapper.style.display = "none";
-            shutter_effect.classList.exit("shutter");
+            shutter_effect.classList.remove("shutter");
         });
     }
 
