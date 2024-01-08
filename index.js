@@ -62,45 +62,42 @@ function on_click_shutter() {
     let popup_container = document.querySelector("#popup_container");
 
     shutter_effect.classList.add("shutter");
-    if (container.style.right === "100%") {
-        let historia_popup = document.querySelector("#historia_wrapper");
-        historia_popup.style.display = "grid";
+    setTimeout(function(){
+        if (container.style.right === "100%") {
+            let historia_popup = document.querySelector("#historia_wrapper");
+            historia_popup.style.display = "grid";
 
-        let remove = historia_popup.querySelector(".remove_button");
-        remove.addEventListener("click", function () {
-            historia_popup.style.display = "none";
-            shutter_effect.classList.remove("shutter");
-        });
-    }
+            let remove = historia_popup.querySelector(".remove_button");
+            remove.addEventListener("click", function () {
+                historia_popup.style.display = "none";
+                shutter_effect.classList.remove("shutter");
+            });
+        }
 
-    if (container.style.right === "200%") {
-        // Här ska nutid popupen vara
-        let nutid_wrapper = document.querySelector("#nutid_wrapper");
-        nutid_wrapper.style.display = "flex";
-
-
-        let exit = nutid_wrapper.querySelector(".exit_button");
-        exit.addEventListener("click", function () {
-            nutid_wrapper.style.display = "none";
-            shutter_effect.classList.remove("shutter");
-        });
-    }
-
-    if (container.style.right === "300%") {
-        let future_popup = document.querySelector("#future_popup");
-        future_popup.style.display = "flex";
+        if (container.style.right === "200%") {
+            let nutid_wrapper = document.querySelector("#nutid_wrapper");
+            nutid_wrapper.style.display = "flex";
 
 
-        let remove = future_popup.querySelector(".remove_button");
-        remove.addEventListener("click", function () {
-            future_popup.style.display = "none";
-            shutter_effect.classList.remove("shutter");
-        });
-    }
+            let exit = nutid_wrapper.querySelector(".exit_button");
+            exit.addEventListener("click", function () {
+                nutid_wrapper.style.display = "none";
+                shutter_effect.classList.remove("shutter");
+            });
+        }
+
+        if (container.style.right === "300%") {
+            let future_popup = document.querySelector("#future_popup");
+            future_popup.style.display = "flex";
 
 
-    //för att sedan gå tillbaka måste shutter klassen tas bort
-
+            let remove = future_popup.querySelector(".remove_button");
+            remove.addEventListener("click", function () {
+                future_popup.style.display = "none";
+                shutter_effect.classList.remove("shutter");
+            });
+        }
+    } , 800);
 }
 
 
