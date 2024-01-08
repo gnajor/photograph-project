@@ -52,16 +52,22 @@ body{
     position: absolute;
     left:50%;
     top:45%;
+    width: max-content;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 90px;
+    font-size: 85px;
     text-align: center;
     z-index:1;
 
     animation:change_opacity 4s ease-in-out;
-    transition-property: left;
-    transition-duration: 3s;
+    transition-property: left, transform;
+    transition-duration: 3s, 0.5s;
     transition-timing-function: ease-in-out;
+}
+
+#loading_in_container h1:hover{
+    transform:translate(-50%, -50%) scale(1.1);
+    cursor: pointer;
 }
 
 #loading_in_container .move_left{
@@ -77,7 +83,7 @@ body{
         opacity: 1;
     }
 }
-/*
+
 @keyframes color-animation {
     0%{
         color:white;
@@ -92,13 +98,13 @@ body{
     }
 }
 
-#loading_in_container span:nth-child(1){animation: color-animation 5s ease-in-out 3s;}
-#loading_in_container span:nth-child(2){animation: color-animation 5s ease-in-out 3.5s;}
-#loading_in_container span:nth-child(3){animation: color-animation 5s ease-in-out 4s;}
-#loading_in_container span:nth-child(4){animation: color-animation 5s ease-in-out 4.5s;}
-*/
+#loading_in_container span:nth-of-type(1){animation: color-animation 5s ease-in-out 3s infinite;}
+#loading_in_container span:nth-of-type(2){animation: color-animation 5s ease-in-out 3.5s infinite;}
+#loading_in_container span:nth-of-type(3){animation: color-animation 5s ease-in-out 4s infinite;}
+#loading_in_container span:nth-of-type(4){animation: color-animation 5s ease-in-out 4.5s infinite;}
 
-/*#content_wrapper{
+
+#content_wrapper{
     transform: scale(4);
 
     transition-property: transform;
@@ -107,8 +113,8 @@ body{
     transition-delay: 6s;
 }     
 
-will be added when done
-*/
+
+
 
 #shutter_effect{
     transition-property: border, opacity;

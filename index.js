@@ -64,7 +64,7 @@ function on_click_shutter() {
     shutter_effect.classList.add("shutter");
     if (container.style.right === "100%") {
         let historia_popup = document.querySelector("#historia_wrapper");
-        historia_popup.style.display = "flex";
+        historia_popup.style.display = "grid";
 
         let remove = historia_popup.querySelector(".remove_button");
         remove.addEventListener("click", function () {
@@ -133,7 +133,7 @@ function change_view_button(backgroundId, rightProcent) {
         button.removeAttribute("disabled", true);
     }
 }
-/*
+
 function start_animation_on_click(){
     let h1_dom = document.querySelector("#loading_in_container > h1");
     let dark_filter = document.querySelector("#dark_filter");
@@ -153,10 +153,8 @@ function start_animation_on_click(){
         container.remove();
     });
 }
-*/
 
 
-//start_animation_on_click();
 
-
+start_animation_on_click();
 select_nav_item();
