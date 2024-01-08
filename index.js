@@ -61,16 +61,10 @@ function on_click_shutter() {
 
     let popup_container = document.querySelector("#popup_container");
 
-    shutter_effect.classList.add("shutter");}
+    shutter_effect.classList.add("shutter");
 
-    if (container.style.right === "100%") { 
-        // Här ska history popupen vara
-        let historia_popup = document.querySelector("#historia_wrapper");
-        shutter_effect.addEventListener("transitionend", function () {
-            historia_popup.style.display = "grid";
-        });
     if (container.style.right === "100%") {
-        let historia_popup = document.querySelector("#historia_popup");
+        let historia_popup = document.querySelector("#historia_wrapper");
         historia_popup.style.display = "flex";
     
         let remove = historia_popup.querySelector(".remove_button");
