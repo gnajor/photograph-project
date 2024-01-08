@@ -81,10 +81,15 @@ function on_click_shutter() {
     }
 
     if (container.style.right === "200%") {
-        //Här ska nutid popupen vara
+        // Här ska nutid popupen vara
         let nutid_popup = document.querySelector("#nutid_wrapper");
-        shutter_effect.addEventListener("transitionend", function () {
-            nutid_popup.style.display = "grid";
+        nutid_wrapper.style.display = "flex";
+
+
+        let exit = nutid_wrapper.querySelector(".exit_button");
+        exit.addEventListener("click", function () {
+            nutid_wrapper.style.display = "none";
+            shutter_effect.classList.remove("shutter");
         });
     }
 
@@ -94,7 +99,7 @@ function on_click_shutter() {
 
 
         let remove = future_popup.querySelector(".remove_button");
-        remove.addEventListener("click", function(){
+        remove.addEventListener("click", function () {
             future_popup.style.display = "none";
             shutter_effect.classList.remove("shutter");
         });
